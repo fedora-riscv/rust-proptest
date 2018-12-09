@@ -7,7 +7,7 @@
 
 Name:           rust-%{crate}
 Version:        0.8.7
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Hypothesis-like property-based testing and shrinking
 
 # Upstream license specification: MIT/Apache-2.0
@@ -208,6 +208,9 @@ which use "unstable" feature of "%{crate}" crate.
 %endif
 
 %changelog
+* Sun Dec 09 2018 Igor Gnatenko <ignatenkobrain@fedoraproject.org> - 0.8.7-3
+- Rebuild
+
 * Sun Dec 09 2018 Igor Gnatenko <ignatenkobrain@fedoraproject.org> - 0.8.7-2
 - Run tests in infrastructure
 
