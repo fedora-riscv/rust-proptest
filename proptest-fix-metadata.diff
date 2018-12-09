@@ -1,0 +1,18 @@
+--- proptest-0.8.7/Cargo.toml	1970-01-01T01:00:00+01:00
++++ proptest-0.8.7/Cargo.toml	2018-12-09T21:42:55.719519+01:00
+@@ -21,6 +21,7 @@
+ categories = ["development-tools::testing"]
+ license = "MIT/Apache-2.0"
+ repository = "https://github.com/altsysrq/proptest"
++exclude = ["/.travis.yml", "/appveyor.yml", "/gen-readme.sh"]
+ [dependencies.bit-set]
+ version = "0.5.0"
+ optional = true
+@@ -68,7 +69,6 @@
+ alloc = []
+ default = ["std", "fork", "timeout", "bit-set"]
+ fork = ["std", "rusty-fork", "tempfile"]
+-nightly = ["lazy_static/spin_no_std"]
+ std = ["rand/std", "byteorder/std", "quick-error", "regex-syntax", "num-traits/std"]
+ timeout = ["fork", "rusty-fork/timeout"]
+ unstable = ["rand/i128_support"]
