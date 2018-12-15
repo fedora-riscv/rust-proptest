@@ -209,6 +209,9 @@ which use "unstable" feature of "%{crate}" crate.
 %endif
 
 %changelog
+* Sat Dec 15 2018 Igor Gnatenko <ignatenkobrain@fedoraproject.org> - 0.8.7-4
+- Bump rand to 0.6
+
 * Sun Dec 09 2018 Igor Gnatenko <ignatenkobrain@fedoraproject.org> - 0.8.7-3
 - Rebuild
 
