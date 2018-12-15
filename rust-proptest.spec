@@ -7,7 +7,7 @@
 
 Name:           rust-%{crate}
 Version:        0.8.7
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        Hypothesis-like property-based testing and shrinking
 
 # Upstream license specification: MIT/Apache-2.0
@@ -17,6 +17,7 @@ Source0:        https://crates.io/api/v1/crates/%{crate}/%{version}/download#/%{
 # Initial patched metadata
 # * No nightly
 # * Exclude unneeded files
+# * Bump rand to 0.6
 Patch0:         proptest-fix-metadata.diff
 
 ExclusiveArch:  %{rust_arches}
@@ -30,9 +31,9 @@ BuildRequires:  (crate(lazy_static) >= 1.0.0 with crate(lazy_static) < 2.0.0)
 BuildRequires:  (crate(num-traits) >= 0.2.2 with crate(num-traits) < 0.3.0)
 BuildRequires:  (crate(num-traits/std) >= 0.2.2 with crate(num-traits/std) < 0.3.0)
 BuildRequires:  (crate(quick-error/default) >= 1.2.1 with crate(quick-error/default) < 2.0.0)
-BuildRequires:  (crate(rand/alloc) >= 0.5.0 with crate(rand/alloc) < 0.6.0)
-BuildRequires:  (crate(rand/i128_support) >= 0.5.0 with crate(rand/i128_support) < 0.6.0)
-BuildRequires:  (crate(rand/std) >= 0.5.0 with crate(rand/std) < 0.6.0)
+BuildRequires:  (crate(rand/alloc) >= 0.6.0 with crate(rand/alloc) < 0.7.0)
+BuildRequires:  (crate(rand/i128_support) >= 0.6.0 with crate(rand/i128_support) < 0.7.0)
+BuildRequires:  (crate(rand/std) >= 0.6.0 with crate(rand/std) < 0.7.0)
 BuildRequires:  (crate(regex-syntax/default) >= 0.6.0 with crate(regex-syntax/default) < 0.7.0)
 BuildRequires:  (crate(rusty-fork) >= 0.2.1 with crate(rusty-fork) < 0.3.0)
 BuildRequires:  (crate(rusty-fork/timeout) >= 0.2.1 with crate(rusty-fork/timeout) < 0.3.0)
