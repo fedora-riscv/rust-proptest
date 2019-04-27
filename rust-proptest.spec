@@ -10,6 +10,7 @@ Release:        1%{?dist}
 Summary:        Hypothesis-like property-based testing and shrinking
 
 # Upstream license specification: MIT/Apache-2.0
+# https://github.com/AltSysrq/proptest/issues/140
 License:        MIT or ASL 2.0
 URL:            https://crates.io/crates/proptest
 Source:         %{crates_source}
@@ -56,7 +57,6 @@ This package contains library source intended for building other packages
 which use "%{crate}" crate.
 
 %files          devel
-%license LICENSE-MIT LICENSE-APACHE
 %doc README.md CHANGELOG.md
 %{cargo_registry}/%{crate}-%{version}/
 
