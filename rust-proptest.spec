@@ -5,17 +5,16 @@
 %global crate proptest
 
 Name:           rust-%{crate}
-Version:        0.9.2
+Version:        0.9.3
 Release:        1%{?dist}
 Summary:        Hypothesis-like property-based testing and shrinking
 
 # Upstream license specification: MIT/Apache-2.0
-# https://github.com/AltSysrq/proptest/issues/140
 License:        MIT or ASL 2.0
 URL:            https://crates.io/crates/proptest
 Source:         %{crates_source}
 # Initial patched metadata
-# * Exclude unneeded files, https://github.com/AltSysrq/proptest/pull/139
+# * TODO: Send PR, Exclude unneeded files
 Patch0:         proptest-fix-metadata.diff
 
 ExclusiveArch:  %{rust_arches}
@@ -57,6 +56,7 @@ This package contains library source intended for building other packages
 which use "%{crate}" crate.
 
 %files          devel
+%license LICENSE-MIT LICENSE-APACHE
 %doc README.md CHANGELOG.md
 %{cargo_registry}/%{crate}-%{version}/
 
@@ -256,6 +256,9 @@ which use "unstable" feature of "%{crate}" crate.
 %endif
 
 %changelog
+* Mon Apr 29 07:08:16 CEST 2019 Igor Gnatenko <ignatenkobrain@fedoraproject.org> - 0.9.3-1
+- Update to 0.9.3
+
 * Sat Apr 27 12:08:50 CEST 2019 Igor Gnatenko <ignatenkobrain@fedoraproject.org> - 0.9.2-1
 - Update to 0.9.2
 
