@@ -237,7 +237,7 @@ which use "unstable" feature of "%{crate}" crate.
 %cargo_install
 
 # building tests takes too much memory for 32-bit arches
-%if %{with check} && %{__isa_bits} >= 64
+%if %{with check} && %{?__isa_bits}%{?!__isa_bits:0} >= 64
 %check
 %cargo_test
 %endif
