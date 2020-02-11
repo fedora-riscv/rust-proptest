@@ -6,7 +6,7 @@
 
 Name:           rust-%{crate}
 Version:        0.9.5
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Hypothesis-like property-based testing and shrinking
 
 # Upstream license specification: MIT/Apache-2.0
@@ -236,12 +236,16 @@ which use "unstable" feature of "%{crate}" crate.
 %install
 %cargo_install
 
-%if %{with check}
+# building tests takes too much memory for 32-bit arches
+%if %{with check} && %{__isa_bits} >= 64
 %check
 %cargo_test
 %endif
 
 %changelog
+* Tue Feb 11 2020 Josh Stone <jistone@redhat.com> - 0.9.5-3
+- Disable testing on 32-bit arches.
+
 * Thu Jan 30 2020 Fedora Release Engineering <releng@fedoraproject.org> - 0.9.5-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_32_Mass_Rebuild
 
