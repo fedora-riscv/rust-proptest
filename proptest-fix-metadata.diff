@@ -1,8 +1,8 @@
---- proptest-0.9.5/Cargo.toml	2020-01-17T10:10:43+00:00
-+++ proptest-0.9.5/Cargo.toml	2020-01-17T18:24:58.072081+00:00
+--- proptest-0.9.6/Cargo.toml	2020-04-11T20:36:58+00:00
++++ proptest-0.9.6/Cargo.toml	2020-04-15T00:20:20.344722+00:00
 @@ -15,7 +15,7 @@
  name = "proptest"
- version = "0.9.5"
+ version = "0.9.6"
  authors = ["Jason Lingle"]
 -exclude = ["/gen-*.sh", "/readme-*.md"]
 +exclude = ["/gen-*.sh", "/readme-*.md", "/test-persistence-location/"]

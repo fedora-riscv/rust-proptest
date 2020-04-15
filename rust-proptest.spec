@@ -5,8 +5,8 @@
 %global crate proptest
 
 Name:           rust-%{crate}
-Version:        0.9.5
-Release:        3%{?dist}
+Version:        0.9.6
+Release:        1%{?dist}
 Summary:        Hypothesis-like property-based testing and shrinking
 
 # Upstream license specification: MIT/Apache-2.0
@@ -243,6 +243,9 @@ which use "unstable" feature of "%{crate}" crate.
 %endif
 
 %changelog
+* Wed Apr 15 2020 Josh Stone <jistone@redhat.com> - 0.9.6-1
+- Update to 0.9.6
+
 * Tue Feb 11 2020 Josh Stone <jistone@redhat.com> - 0.9.5-3
 - Disable testing on 32-bit arches.
 
