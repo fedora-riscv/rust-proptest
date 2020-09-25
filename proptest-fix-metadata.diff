@@ -1,11 +1,11 @@
---- proptest-0.9.6/Cargo.toml	2020-04-11T20:36:58+00:00
-+++ proptest-0.9.6/Cargo.toml	2020-04-15T00:20:20.344722+00:00
+--- proptest-0.10.1/Cargo.toml	2020-08-15T16:23:17+00:00
++++ proptest-0.10.1/Cargo.toml	2020-09-25T09:11:55.518703+00:00
 @@ -15,7 +15,7 @@
  name = "proptest"
- version = "0.9.6"
+ version = "0.10.1"
  authors = ["Jason Lingle"]
 -exclude = ["/gen-*.sh", "/readme-*.md"]
 +exclude = ["/gen-*.sh", "/readme-*.md", "/test-persistence-location/"]
  description = "Hypothesis-like property-based testing and shrinking.\n"
  homepage = "https://altsysrq.github.io/proptest-book/proptest/index.html"
- documentation = "https://altsysrq.github.io/rustdoc/proptest/0.9.4/proptest/"
+ documentation = "https://altsysrq.github.io/rustdoc/proptest/0.10.1/proptest/"
