@@ -6,7 +6,7 @@
 
 Name:           rust-%{crate}
 Version:        0.10.1
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Hypothesis-like property-based testing and shrinking
 
 # Upstream license specification: MIT/Apache-2.0
@@ -243,6 +243,9 @@ which use "unstable" feature of "%{crate}" crate.
 %endif
 
 %changelog
+* Wed Jan 27 2021 Fedora Release Engineering <releng@fedoraproject.org> - 0.10.1-3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_34_Mass_Rebuild
+
 * Fri Dec 11 2020 Fabio Valentini <decathorpe@gmail.com> - 0.10.1-2
 - Remove hardware-rng feature (missing dependency: x86).
 
