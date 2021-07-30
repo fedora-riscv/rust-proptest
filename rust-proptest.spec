@@ -6,7 +6,7 @@
 
 Name:           rust-%{crate}
 Version:        1.0.0
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Hypothesis-like property-based testing and shrinking
 
 # Upstream license specification: MIT/Apache-2.0
@@ -239,10 +239,14 @@ which use "unstable" feature of "%{crate}" crate.
 # building tests takes too much memory for 32-bit arches
 %if %{with check} && %{?__isa_bits}%{?!__isa_bits:0} >= 64
 %check
-%cargo_test
+# skip some tests that result in range overflows with rand >= 0.8.4
+%cargo_test -- -- --skip f32::range_from --skip f64::range_from --skip f32::range_to_inclusive --skip f64::range_to_inclusive
 %endif
 
 %changelog
+* Fri Jul 30 2021 Fabio Valentini <decathorpe@gmail.com> - 1.0.0-3
+- Skip some tests that result in range overflows with rand >= 0.8.4.
+
 * Fri Jul 23 2021 Fedora Release Engineering <releng@fedoraproject.org> - 1.0.0-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_35_Mass_Rebuild
 
