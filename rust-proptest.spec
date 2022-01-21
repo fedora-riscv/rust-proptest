@@ -6,7 +6,7 @@
 
 Name:           rust-%{crate}
 Version:        1.0.0
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        Hypothesis-like property-based testing and shrinking
 
 # Upstream license specification: MIT/Apache-2.0
@@ -244,6 +244,9 @@ which use "unstable" feature of "%{crate}" crate.
 %endif
 
 %changelog
+* Fri Jan 21 2022 Fedora Release Engineering <releng@fedoraproject.org> - 1.0.0-4
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_36_Mass_Rebuild
+
 * Fri Jul 30 2021 Fabio Valentini <decathorpe@gmail.com> - 1.0.0-3
 - Skip some tests that result in range overflows with rand >= 0.8.4.
 
