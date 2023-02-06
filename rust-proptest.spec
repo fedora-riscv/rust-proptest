@@ -6,7 +6,7 @@
 
 Name:           rust-%{crate}
 Version:        1.0.0
-Release:        6%{?dist}
+Release:        %autorelease
 Summary:        Hypothesis-like property-based testing and shrinking
 
 # Upstream license specification: MIT/Apache-2.0
@@ -244,75 +244,4 @@ which use "unstable" feature of "%{crate}" crate.
 %endif
 
 %changelog
-* Sat Jan 21 2023 Fedora Release Engineering <releng@fedoraproject.org> - 1.0.0-6
-- Rebuilt for https://fedoraproject.org/wiki/Fedora_38_Mass_Rebuild
-
-* Sat Jul 23 2022 Fedora Release Engineering <releng@fedoraproject.org> - 1.0.0-5
-- Rebuilt for https://fedoraproject.org/wiki/Fedora_37_Mass_Rebuild
-
-* Fri Jan 21 2022 Fedora Release Engineering <releng@fedoraproject.org> - 1.0.0-4
-- Rebuilt for https://fedoraproject.org/wiki/Fedora_36_Mass_Rebuild
-
-* Fri Jul 30 2021 Fabio Valentini <decathorpe@gmail.com> - 1.0.0-3
-- Skip some tests that result in range overflows with rand >= 0.8.4.
-
-* Fri Jul 23 2021 Fedora Release Engineering <releng@fedoraproject.org> - 1.0.0-2
-- Rebuilt for https://fedoraproject.org/wiki/Fedora_35_Mass_Rebuild
-
-* Fri May 21 2021 Fabio Valentini <decathorpe@gmail.com> - 1.0.0-1
-- Update to version 1.0.0.
-- Fixes RHBZ#1931159
-
-* Wed Jan 27 2021 Fedora Release Engineering <releng@fedoraproject.org> - 0.10.1-3
-- Rebuilt for https://fedoraproject.org/wiki/Fedora_34_Mass_Rebuild
-
-* Fri Dec 11 2020 Fabio Valentini <decathorpe@gmail.com> - 0.10.1-2
-- Remove hardware-rng feature (missing dependency: x86).
-
-* Fri Sep 25 2020 Fabio Valentini <decathorpe@gmail.com> - 0.10.1-1
-- Update to version 0.10.1.
-
-* Wed Jul 29 2020 Fedora Release Engineering <releng@fedoraproject.org> - 0.9.6-2
-- Rebuilt for https://fedoraproject.org/wiki/Fedora_33_Mass_Rebuild
-
-* Wed Apr 15 2020 Josh Stone <jistone@redhat.com> - 0.9.6-1
-- Update to 0.9.6
-
-* Tue Feb 11 2020 Josh Stone <jistone@redhat.com> - 0.9.5-3
-- Disable testing on 32-bit arches.
-
-* Thu Jan 30 2020 Fedora Release Engineering <releng@fedoraproject.org> - 0.9.5-2
-- Rebuilt for https://fedoraproject.org/wiki/Fedora_32_Mass_Rebuild
-
-* Fri Jan 17 2020 Josh Stone <jistone@redhat.com> - 0.9.5-1
-- Update to 0.9.5
-
-* Fri Jul 26 2019 Fedora Release Engineering <releng@fedoraproject.org> - 0.9.4-3
-- Rebuilt for https://fedoraproject.org/wiki/Fedora_31_Mass_Rebuild
-
-* Thu Jun 27 17:17:22 CEST 2019 Igor Gnatenko <ignatenkobrain@fedoraproject.org> - 0.9.4-2
-- Regenerate
-
-* Sun Jun 09 13:43:04 CEST 2019 Igor Gnatenko <ignatenkobrain@fedoraproject.org> - 0.9.4-1
-- Update to 0.9.4
-
-* Mon Apr 29 07:08:16 CEST 2019 Igor Gnatenko <ignatenkobrain@fedoraproject.org> - 0.9.3-1
-- Update to 0.9.3
-
-* Sat Apr 27 12:08:50 CEST 2019 Igor Gnatenko <ignatenkobrain@fedoraproject.org> - 0.9.2-1
-- Update to 0.9.2
-
-* Sat Feb 02 2019 Fedora Release Engineering <releng@fedoraproject.org> - 0.8.7-5
-- Rebuilt for https://fedoraproject.org/wiki/Fedora_30_Mass_Rebuild
-
-* Sat Dec 15 2018 Igor Gnatenko <ignatenkobrain@fedoraproject.org> - 0.8.7-4
-- Bump rand to 0.6
-
-* Sun Dec 09 2018 Igor Gnatenko <ignatenkobrain@fedoraproject.org> - 0.8.7-3
-- Rebuild
-
-* Sun Dec 09 2018 Igor Gnatenko <ignatenkobrain@fedoraproject.org> - 0.8.7-2
-- Run tests in infrastructure
-
-* Sun Dec 09 2018 Igor Gnatenko <ignatenkobrain@fedoraproject.org> - 0.8.7-1
-- Initial package
+%autochangelog
