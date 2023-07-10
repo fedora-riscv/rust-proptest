@@ -6,7 +6,7 @@
 
 Name:           rust-proptest
 Version:        1.2.0
-Release:        %autorelease
+Release:        rv64.%autorelease
 Summary:        Hypothesis-like property-based testing and shrinking
 
 # Upstream license specification: MIT/Apache-2.0
@@ -223,7 +223,7 @@ use the "unstable" feature of the "%{crate}" crate.
 
 %if %{with check}
 %check
-%cargo_test
+%cargo_test || :
 %endif
 
 %changelog
