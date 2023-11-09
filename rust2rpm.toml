@@ -1,0 +1,6 @@
+[features]
+hide = [
+    "hardware-rng",
+    "x86",
+]
+
